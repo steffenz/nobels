@@ -8,4 +8,13 @@ weapons etc). I also want a merch shop for the poor (something with laks, and al
 
 Enchance the UI and use proper fonts (and sizes). Enhance the nominate yourself. I want an interactive game where you keep nagging until thye say "Fine
 we'll consider you!". Use Trump rhetoric.
-────────────────────────────────────────────
+──────────────────────────────────────────
+We should be careful gloryfying María (especially after giving the price to Trump), so tone down that part. As for the game - the tweets are funny but
+disappears to quickly. Should act more like a traditional toast where hovering keeps them visible. Maybe even have a way to view them later in a message
+box. And feel free to throw in more Trump-ism to make it more absurd whilst. Also the random message/tweet tends to show the same over and over. Try to
+show as many of them as we can and re-cycle only when needed!
+
+We should be careful gloryfying María (especially after giving the price to Trump), so tone down that part. As for the game - the tweets are funny but
+disappears to quickly. Should act more like a traditional toast where hovering keeps them visible. Maybe even have a way to view them later in a message
+box. And feel free to throw in more Trump-ism to make it more absurd whilst. Also the random message/tweet tends to show the same over and over. Try to show
+as many of them as we can and re-cycle only when needed!

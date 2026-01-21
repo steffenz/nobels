@@ -129,17 +129,17 @@ export const listings: NobelListing[] = [
 	},
 	{
 		id: 'peace-2025-machado',
-		title: '2025 Nobel Peace Prize - Reserved for Someone Who Deserves It',
+		title: '2025 Nobel Peace Prize - Pending Verification',
 		category: 'peace',
 		year: 2025,
-		seller: 'María Corina Machado',
-		sellerTitle: 'Venezuelan Opposition Leader',
+		seller: 'Various Opposition Figures',
+		sellerTitle: 'Democracy Advocates (Disputed)',
 		price: 1,
 		currency: 'NOK',
-		description: 'Actually fighting for democracy while the world sends thoughts and prayers. Unlike some nominees, this one comes with real receipts. Currently in hiding because standing up for democracy has consequences. Norway could give this one, but they\'re too busy selling weapons to care.',
-		condition: 'mint',
-		featured: true,
-		reasonForSelling: 'Not for sale. Just making a point about who actually deserves recognition vs. who demands it.'
+		description: 'Reserved for someone doing actual work somewhere. Committee still reviewing whether they exist. Meanwhile, the world continues to offer thoughts, prayers, and occasionally a strongly worded statement.',
+		condition: 'slightly_tarnished',
+		featured: false,
+		reasonForSelling: 'Not for sale. Just highlighting that the committee often overlooks real work in favor of safer choices.'
 	},
 	{
 		id: 'peace-2024-norway',
