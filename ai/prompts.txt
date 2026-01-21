@@ -1,0 +1,5 @@
+I want to build a satirical website on nobels.no that has a marketplace for buying and selling nobels prices in light of current events. I already use the Next-stack so that might be a good idea, but I'm open to Svelte too (if you guide me so I can learn!)
+
+
+
+  

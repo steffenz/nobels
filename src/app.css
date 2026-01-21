@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+
+:root {
+	--gold: #d4af37;
+	--gold-dark: #b8960f;
+	--navy: #1a1a2e;
+	--cream: #faf8f5;
+}
+
+body {
+	font-family: 'Georgia', serif;
+}
