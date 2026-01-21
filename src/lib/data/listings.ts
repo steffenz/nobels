@@ -112,6 +112,62 @@ export const listings: NobelListing[] = [
 		condition: 'mint',
 		featured: false,
 		reasonForSelling: 'Space-time continuum rent increase.'
+	},
+	{
+		id: 'peace-2026-trump',
+		title: '2026 Nobel Peace Prize - PRE-ORDER (Allegedly)',
+		category: 'peace',
+		year: 2026,
+		seller: 'D. J. Trump',
+		sellerTitle: '45th & 47th President, Very Stable Genius',
+		price: 999999999,
+		currency: 'NOK',
+		description: 'The greatest Nobel Prize in history, frankly. Many people are saying it. I was robbed in 2018, 2019, 2020... actually every year. But this one I definitely won. The Swedish are very nice to me. Beautiful country. Not as beautiful as my buildings, but nice.',
+		condition: 'controversial',
+		featured: true,
+		reasonForSelling: 'Converting to Trump NFTs. Much better value. Believe me.'
+	},
+	{
+		id: 'peace-2025-machado',
+		title: '2025 Nobel Peace Prize - Reserved for Someone Who Deserves It',
+		category: 'peace',
+		year: 2025,
+		seller: 'María Corina Machado',
+		sellerTitle: 'Venezuelan Opposition Leader',
+		price: 1,
+		currency: 'NOK',
+		description: 'Actually fighting for democracy while the world sends thoughts and prayers. Unlike some nominees, this one comes with real receipts. Currently in hiding because standing up for democracy has consequences. Norway could give this one, but they\'re too busy selling weapons to care.',
+		condition: 'mint',
+		featured: true,
+		reasonForSelling: 'Not for sale. Just making a point about who actually deserves recognition vs. who demands it.'
+	},
+	{
+		id: 'peace-2024-norway',
+		title: '2024 Nobel Peace Prize - Norwegian Hypocrisy Edition',
+		category: 'peace',
+		year: 2024,
+		seller: 'Norwegian Nobel Committee',
+		sellerTitle: 'Arms Dealers with a Side Hustle',
+		price: 8000000000,
+		currency: 'NOK',
+		description: 'Freshly awarded while Norway exports $8 billion in weapons annually. Includes: one gold medal, one certificate, and a masterclass in cognitive dissonance. Kongsberg Defence sends their regards.',
+		condition: 'controversial',
+		featured: true,
+		reasonForSelling: 'Need to balance the budget after giving away all that prize money. Weapons don\'t sell themselves... actually they do, we have great salespeople.'
+	},
+	{
+		id: 'peace-1973-kissinger',
+		title: '1973 Nobel Peace Prize - War Criminal Special',
+		category: 'peace',
+		year: 1973,
+		seller: 'Estate of H. Kissinger',
+		sellerTitle: 'Secretary of State, Carpet Bomber',
+		price: 666000,
+		currency: 'NOK',
+		description: 'Awarded for the Vietnam peace accords while secretly bombing Cambodia. Le Duc Tho at least had the decency to refuse his. This one comes with extensive documentation of why the Nobel Committee has no credibility. Blood stains are metaphorical.',
+		condition: 'controversial',
+		featured: false,
+		reasonForSelling: 'Previous owner deceased. Finally facing the real prize committee.'
 	}
 ];
 

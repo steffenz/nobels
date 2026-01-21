@@ -33,3 +33,11 @@ export const categoryColors: Record<NobelCategory, string> = {
 	medicine: 'bg-red-100 text-red-800',
 	economics: 'bg-yellow-100 text-yellow-800'
 };
+
+export interface DiscountCode {
+	code: string;
+	discount: number;
+	description: string;
+	satiricalNote: string;
+	expired?: boolean;
+}

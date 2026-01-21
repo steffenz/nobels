@@ -1,5 +1,9 @@
 I want to build a satirical website on nobels.no that has a marketplace for buying and selling nobels prices in light of current events. I already use the Next-stack so that might be a good idea, but I'm open to Svelte too (if you guide me so I can learn!)
 
-
+I also like to have a "LinkedIn Jerk-Circle Post Generator". Discount codes should also be available when buying (poke fun of war crimes++). I also want
+a "nominate yourself" function where you can where you can hit a "nag/cry/act like a man child" button until you win. I want clear references to Donald
+Trump and María Corina Machado. I also want the disclaimers and warnings to nod to the original Jackass Series warnings (as everyone seems to be
+jackasses right now). Focus on how the governments (mainly Norway) are sellouts and promote war just and just pretend to care about peace (selling
+weapons etc). I also want a merch shop for the poor (something with laks, and all i got was this lousy t-shirt, sticker, etc - be creative here!)
 
   

@@ -1,8 +1,19 @@
 <script lang="ts">
 	import { categoryLabels, categoryColors } from '$lib/types';
+	import { validateCode } from '$lib/data/discounts';
 
 	let { data } = $props();
 	const listing = data.listing;
+
+	let discountCode = $state('');
+	let appliedDiscount = $state<{ code: string; discount: number; note: string } | null>(null);
+	let discountError = $state('');
+
+	const finalPrice = $derived(
+		appliedDiscount
+			? listing.price * (1 - appliedDiscount.discount / 100)
+			: listing.price
+	);
 
 	function formatPrice(price: number, currency: string): string {
 		return new Intl.NumberFormat('nb-NO', {
@@ -10,6 +21,22 @@
 			currency,
 			maximumFractionDigits: 0
 		}).format(price);
+	}
+
+	function applyDiscount() {
+		discountError = '';
+		const found = validateCode(discountCode);
+		if (found) {
+			appliedDiscount = {
+				code: found.code,
+				discount: found.discount,
+				note: found.satiricalNote
+			};
+		} else {
+			discountError = discountCode.toUpperCase() === 'TRUMPWON'
+				? 'Nice try. This code was revoked. Unlike the election, this one actually was stolen.'
+				: 'Invalid code. Try something more morally bankrupt.';
+		}
 	}
 
 	const conditionLabels = {
@@ -59,13 +86,59 @@
 
 				<!-- Title & Price -->
 				<h1 class="text-3xl font-bold text-[var(--navy)] mb-4">{listing.title}</h1>
-				<div class="text-4xl font-bold text-[var(--gold)] mb-6">
-					{formatPrice(listing.price, listing.currency)}
+				<div class="mb-6">
+					{#if appliedDiscount}
+						<div class="text-2xl text-gray-400 line-through">
+							{formatPrice(listing.price, listing.currency)}
+						</div>
+						<div class="text-4xl font-bold text-green-600">
+							{formatPrice(finalPrice, listing.currency)}
+						</div>
+						<div class="text-sm text-green-600 mt-1">
+							{appliedDiscount.discount}% off with code {appliedDiscount.code}
+						</div>
+					{:else}
+						<div class="text-4xl font-bold text-[var(--gold)]">
+							{formatPrice(listing.price, listing.currency)}
+						</div>
+					{/if}
 				</div>
 
 				<!-- Description -->
 				<div class="prose max-w-none mb-8">
 					<p class="text-gray-700 text-lg leading-relaxed">{listing.description}</p>
+				</div>
+
+				<!-- Discount Code -->
+				<div class="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-6">
+					<label class="block text-sm font-medium text-amber-800 mb-2">
+						Have a War Crimes Discount Code?
+					</label>
+					<div class="flex gap-2">
+						<input
+							type="text"
+							bind:value={discountCode}
+							placeholder="Enter code (e.g., WARCRIMES10)"
+							class="flex-1 border rounded px-3 py-2 text-sm uppercase"
+						/>
+						<button
+							onclick={applyDiscount}
+							class="bg-amber-600 text-white px-4 py-2 rounded font-medium hover:bg-amber-700 transition-colors"
+						>
+							Apply
+						</button>
+					</div>
+					{#if discountError}
+						<p class="text-red-600 text-sm mt-2">{discountError}</p>
+					{/if}
+					{#if appliedDiscount}
+						<div class="mt-3 p-3 bg-amber-100 rounded text-sm text-amber-900">
+							<strong>Code Applied!</strong> {appliedDiscount.note}
+						</div>
+					{/if}
+					<p class="text-xs text-amber-700 mt-2">
+						Popular codes: KONGSBERG20, OILMONEY25, WEAPONS2SAUDIS, DRONESTRIKES
+					</p>
 				</div>
 
 				<!-- Seller Info -->
