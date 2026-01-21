@@ -16,7 +16,7 @@
 <!-- Hero Section -->
 <section class="gradient-animated text-white py-24 md:py-32 px-6">
 	<div class="max-w-5xl mx-auto text-center">
-		<p class="text-[var(--gold)] font-medium tracking-widest uppercase text-sm mb-4">Est. 2025 - Oslo, Norway</p>
+		<p class="text-[var(--gold)] font-medium tracking-widest uppercase text-sm mb-4">Est. 2026 - Oslo, Norway</p>
 		<h1 class="font-display text-5xl md:text-7xl font-bold mb-6 leading-tight">
 			The World's Premier<br/>
 			<span class="text-[var(--gold)]">Nobel Prize</span> Marketplace

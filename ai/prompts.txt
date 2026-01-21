@@ -28,3 +28,10 @@ If we can somehow mix in special Epstein stuff, that be golden (Jagland is in th
   encourage user to consider donating to a organization worthwile fighting instead of
   supporting these clowns. Maybe make a list and send the user to their pages if they
   click.
+
+  A few more things. The year now is 2026. Remove the "Sue us, cowards" and if any
+  change it to beg them not to sue. For merch I also want to link to donations. And
+  product description should not be shortened. Technically having a page on how this is
+  made with original prompts would be nice, also with a link to the GitHub repo (issues
+  should be submitted as prompts!). Also update README to tell what this project is and
+  how its made. Finally - prepare for release on GitHub Pages.

@@ -1,4 +1,15 @@
 <script lang="ts">
+	import { donationOrganizations, categoryLabels as donationCategories } from '$lib/data/donations';
+
+	let showDonationModal = $state(false);
+	let selectedDonationCategory = $state<string>('all');
+
+	const filteredOrgs = $derived(
+		selectedDonationCategory === 'all'
+			? donationOrganizations
+			: donationOrganizations.filter(o => o.category === selectedDonationCategory)
+	);
+
 	interface MerchItem {
 		id: string;
 		name: string;
@@ -254,7 +265,7 @@
 							{item.name}
 						</h3>
 
-						<p class="text-gray-600 text-sm mb-4 line-clamp-3">
+						<p class="text-gray-600 text-sm mb-4">
 							{item.description}
 						</p>
 
@@ -271,10 +282,10 @@
 							</div>
 
 							<button
-								disabled={!item.inStock}
-								class="px-4 py-2 rounded font-medium transition-colors {item.inStock ? 'bg-[var(--gold)] text-[var(--navy)] hover:bg-[var(--gold-dark)]' : 'bg-gray-200 text-gray-500 cursor-not-allowed'}"
+								onclick={() => showDonationModal = true}
+								class="px-4 py-2 rounded font-medium transition-colors {item.inStock ? 'bg-green-600 text-white hover:bg-green-700' : 'bg-gray-200 text-gray-500'}"
 							>
-								{item.inStock ? 'Add to Cart' : 'Gone'}
+								{item.inStock ? 'Donate Instead' : 'Donate'}
 							</button>
 						</div>
 					</div>
@@ -301,8 +312,11 @@
 				<span class="text-white/60 line-through">{formatPrice(999)}</span>
 				<span class="bg-red-500 text-white px-3 py-1 rounded text-sm font-bold">50% OFF</span>
 			</div>
-			<button class="mt-6 bg-[var(--gold)] text-[var(--navy)] px-8 py-3 rounded-lg font-bold hover:bg-[var(--gold-dark)] transition-colors">
-				Buy Depression Bundle
+			<button
+				onclick={() => showDonationModal = true}
+				class="mt-6 bg-green-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-green-700 transition-colors"
+			>
+				💚 Donate to Real Causes Instead
 			</button>
 			<p class="text-xs text-white/40 mt-4">
 				Shipping: Free within Norway (we have oil money). International: Your GDP's problem.
@@ -344,5 +358,97 @@
 				</details>
 			</div>
 		</div>
+
+		<!-- Donation CTA -->
+		<div class="mt-12 bg-green-50 border-2 border-green-200 rounded-xl p-8 text-center">
+			<h3 class="font-display font-bold text-2xl text-green-800 mb-3">Wait - Don't Buy This Junk</h3>
+			<p class="text-green-700 mb-4 max-w-2xl mx-auto">
+				Instead of buying ironic merch to fill the void, consider donating to organizations
+				that actually make a difference. Your money could help real people instead of funding our salmon obsession.
+			</p>
+			<button
+				onclick={() => showDonationModal = true}
+				class="bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-green-700 transition-colors"
+			>
+				💚 See Real Donation Options
+			</button>
+		</div>
 	</div>
 </section>
+
+<!-- Donation Modal -->
+{#if showDonationModal}
+	<div class="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4" onclick={() => showDonationModal = false}>
+		<div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden" onclick={(e) => e.stopPropagation()}>
+			<div class="p-6 border-b bg-green-50">
+				<div class="flex items-center justify-between">
+					<div>
+						<h3 class="font-display font-bold text-2xl text-green-800">Do Something Real Instead</h3>
+						<p class="text-green-700 mt-1">Skip the merch, make an impact</p>
+					</div>
+					<button
+						onclick={() => showDonationModal = false}
+						class="text-gray-400 hover:text-gray-600 text-3xl leading-none"
+					>
+						×
+					</button>
+				</div>
+			</div>
+
+			<div class="p-6">
+				<p class="text-gray-600 mb-6">
+					That t-shirt won't change the world, but your donation might.
+					Here are organizations actually doing the work:
+				</p>
+
+				<!-- Category Filter -->
+				<div class="flex flex-wrap gap-2 mb-6">
+					<button
+						onclick={() => selectedDonationCategory = 'all'}
+						class="px-4 py-2 rounded-full text-sm font-medium transition-colors {selectedDonationCategory === 'all' ? 'bg-green-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}"
+					>
+						All
+					</button>
+					{#each Object.entries(donationCategories) as [key, label]}
+						<button
+							onclick={() => selectedDonationCategory = key}
+							class="px-4 py-2 rounded-full text-sm font-medium transition-colors {selectedDonationCategory === key ? 'bg-green-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}"
+						>
+							{label}
+						</button>
+					{/each}
+				</div>
+
+				<!-- Organizations List -->
+				<div class="space-y-4 max-h-[40vh] overflow-y-auto">
+					{#each filteredOrgs as org}
+						<a
+							href={org.url}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="block p-4 bg-gray-50 rounded-xl hover:bg-green-50 border-2 border-transparent hover:border-green-200 transition-all group"
+						>
+							<div class="flex items-start gap-4">
+								<div class="text-3xl">{org.emoji}</div>
+								<div class="flex-1">
+									<div class="font-bold text-[var(--navy)] group-hover:text-green-700 transition-colors">
+										{org.name}
+									</div>
+									<p class="text-sm text-gray-600 mt-1">{org.description}</p>
+								</div>
+								<div class="text-green-600 font-bold text-lg group-hover:translate-x-1 transition-transform">
+									→
+								</div>
+							</div>
+						</a>
+					{/each}
+				</div>
+
+				<div class="mt-6 p-4 bg-amber-50 rounded-xl text-sm text-amber-800">
+					<strong>Disclaimer:</strong> We're not affiliated with these organizations.
+					We just think your money is better spent helping people than on ironic salmon merchandise.
+				</div>
+			</div>
+		</div>
+	</div>
+{/if}

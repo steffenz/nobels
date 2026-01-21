@@ -30,6 +30,7 @@
 				<a href="/sell" class="text-sm font-medium hover:text-[var(--gold)] transition-colors">Sell Your Nobel</a>
 				<a href="/linkedin" class="text-sm font-medium hover:text-[var(--gold)] transition-colors">LinkedIn BS</a>
 				<a href="/merch" class="text-sm font-medium hover:text-[var(--gold)] transition-colors">Merch</a>
+				<a href="/how-its-made" class="text-sm font-medium hover:text-[var(--gold)] transition-colors">How It's Made</a>
 				<a href="/about" class="text-sm font-medium hover:text-[var(--gold)] transition-colors">About</a>
 			</div>
 
@@ -50,6 +51,7 @@
 				<a href="/sell" class="py-2 px-3 rounded-lg hover:bg-white/10 hover:text-[var(--gold)] transition-colors">Sell Your Nobel</a>
 				<a href="/linkedin" class="py-2 px-3 rounded-lg hover:bg-white/10 hover:text-[var(--gold)] transition-colors">LinkedIn BS</a>
 				<a href="/merch" class="py-2 px-3 rounded-lg hover:bg-white/10 hover:text-[var(--gold)] transition-colors">Merch</a>
+				<a href="/how-its-made" class="py-2 px-3 rounded-lg hover:bg-white/10 hover:text-[var(--gold)] transition-colors">How It's Made</a>
 				<a href="/about" class="py-2 px-3 rounded-lg hover:bg-white/10 hover:text-[var(--gold)] transition-colors">About</a>
 			</div>
 		{/if}
@@ -116,13 +118,13 @@
 						<li><a href="/about" class="hover:text-white transition-colors">About (Satire)</a></li>
 						<li><span class="line-through opacity-60">Privacy Policy</span> <span class="text-xs">(lol)</span></li>
 						<li><span class="line-through opacity-60">Terms of Service</span></li>
-						<li class="text-white/40">Sue us, cowards</li>
+						<li class="text-white/40">Please don't sue us 🙏</li>
 					</ul>
 				</div>
 			</div>
 
 			<div class="text-center text-white/30 text-xs border-t border-white/10 pt-8 space-y-1">
-				<p>© 2025 NobelMarket. A satirical production.</p>
+				<p>© 2026 NobelMarket. A satirical production.</p>
 				<p>No actual Nobel Prizes were harmed in the making of this website.</p>
 				<p class="text-white/20">Funded by oil money, like everything else in Norway.</p>
 			</div>
