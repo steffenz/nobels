@@ -168,6 +168,62 @@ export const listings: NobelListing[] = [
 		condition: 'controversial',
 		featured: false,
 		reasonForSelling: 'Previous owner deceased. Finally facing the real prize committee.'
+	},
+	{
+		id: 'peace-2012-jagland',
+		title: '2012 Nobel Committee Chairman\'s Personal Rolodex',
+		category: 'peace',
+		year: 2012,
+		seller: 'T. Jagland',
+		sellerTitle: 'Former Committee Chairman, Council of Europe Head, Well-Connected',
+		price: 4200000,
+		currency: 'NOK',
+		description: 'Not a prize per se, but includes access to an extensive network of powerful contacts from his time leading the Nobel Committee. Buyer will receive: one leather-bound address book (some pages redacted), membership to several exclusive clubs, and a fascinating list of associates that recently became public. No questions asked about why certain names are highlighted.',
+		condition: 'controversial',
+		featured: true,
+		reasonForSelling: 'Downsizing contact list for personal reasons. Some associations no longer... advantageous.'
+	},
+	{
+		id: 'peace-2025-store',
+		title: '2025 Norwegian PM Special - "We Investigated Ourselves" Edition',
+		category: 'peace',
+		year: 2025,
+		seller: 'Jonas Gahr Støre',
+		sellerTitle: 'Prime Minister, Former Foreign Minister, Professional Concern-Expresser',
+		price: 3700000,
+		currency: 'NOK',
+		description: 'Commemorating years of expressing "deep concern" about conflicts while approving weapons exports. Includes: one framed photo of looking worried at press conferences, a collection of strongly-worded statements that changed nothing, and documentation of how Norway profits from war while lecturing others about peace. Aksjeskandal not included (sold separately).',
+		condition: 'controversial',
+		featured: true,
+		reasonForSelling: 'Approval ratings suggest career pivot may be needed. "For the good of the party."'
+	},
+	{
+		id: 'peace-2027-greenland',
+		title: '2027 Nobel Peace Prize - Greenland Acquisition Commemorative',
+		category: 'peace',
+		year: 2027,
+		seller: 'D. J. Trump',
+		sellerTitle: 'President, Real Estate Visionary, Island Collector',
+		price: 51000000000,
+		currency: 'NOK',
+		description: 'Pre-order for the prize commemorating the peaceful acquisition of Greenland. "We made them an offer they couldn\'t refuse - very peacefully! The most peaceful acquisition since... ever! The Greenlanders love me. LOVE me. Denmark was being very unfair, but we worked it out. Beautiful ice. The best ice. We\'re going to make Greenland great - it\'s already in the name!"',
+		condition: 'controversial',
+		featured: false,
+		reasonForSelling: 'Not selling. Just letting you know it exists. Tremendous prize. Many people want it.'
+	},
+	{
+		id: 'economics-2024-oligarch',
+		title: '2024 Economics Prize - "Friends of the Committee" Edition',
+		category: 'economics',
+		year: 2024,
+		seller: 'Anonymous Donor',
+		sellerTitle: 'Philanthropist, Island Owner, Flight Log Regular',
+		price: 10000000,
+		currency: 'NOK',
+		description: 'Special edition for those who understand that economics is really about networking. Comes with: invitations to exclusive conferences, access to private islands (international waters preferred), and a guarantee that no one will ask uncomfortable questions about your funding sources. Committee members have been "very accommodating."',
+		condition: 'slightly_tarnished',
+		featured: false,
+		reasonForSelling: 'Estate sale. Previous owner unavailable for comment.'
 	}
 ];
 
